@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="demo" Class="Dep_LinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=l59006r8zo.database.windows.net;Initial Catalog=demo;User ID=aallanrd;Connect Timeout=60" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="demoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Departments" Member="Departments">
+    <Type Name="Department">
+      <Column Name="IdDepto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nbrDepto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idEncargado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ubicacion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.allProcedures" Method="allProcedures">
+    <ElementType Name="allProceduresResult">
+      <Column Name="SPECIFIC_NAME" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

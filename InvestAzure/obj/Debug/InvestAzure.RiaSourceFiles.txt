@@ -1,0 +1,1 @@
+C:\Users\Allan\Documents\Visual Studio 2013\Projects\InvestAzure\InvestAzure.Web\InvestAzure.Web.csproj,635628185814420081,Dep_Linq.designer.cs,Emp_Linq.designer.cs,ISService.cs,Properties\AssemblyInfo.cs,SService.svc.cs,

@@ -1,0 +1,6 @@
+C:\Users\Allan\Documents\Visual Studio 2013\Projects\InvestAzure\InvestAzure.Web\bin\InvestAzure.Web.dll.config
+C:\Users\Allan\Documents\Visual Studio 2013\Projects\InvestAzure\InvestAzure.Web\bin\InvestAzure.Web.dll
+C:\Users\Allan\Documents\Visual Studio 2013\Projects\InvestAzure\InvestAzure.Web\bin\InvestAzure.Web.pdb
+C:\Users\Allan\Documents\Visual Studio 2013\Projects\InvestAzure\InvestAzure.Web\obj\Debug\InvestAzure.Web.dll
+C:\Users\Allan\Documents\Visual Studio 2013\Projects\InvestAzure\InvestAzure.Web\obj\Debug\InvestAzure.Web.pdb
+C:\Users\Allan\Documents\Visual Studio 2013\Projects\InvestAzure\InvestAzure.Web\obj\Debug\InvestAzure.Web.csprojResolveAssemblyReference.cache

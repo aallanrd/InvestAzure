@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestAzure", "InvestAzure\InvestAzure.csproj", "{DD67E79A-B443-4B14-925C-ED022E6D0DB8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F5732645-C88D-41CE-9B81-FB68BFCF2572} = {F5732645-C88D-41CE-9B81-FB68BFCF2572}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestAzure.Web", "InvestAzure.Web\InvestAzure.Web.csproj", "{F5732645-C88D-41CE-9B81-FB68BFCF2572}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD67E79A-B443-4B14-925C-ED022E6D0DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD67E79A-B443-4B14-925C-ED022E6D0DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD67E79A-B443-4B14-925C-ED022E6D0DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD67E79A-B443-4B14-925C-ED022E6D0DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5732645-C88D-41CE-9B81-FB68BFCF2572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5732645-C88D-41CE-9B81-FB68BFCF2572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5732645-C88D-41CE-9B81-FB68BFCF2572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5732645-C88D-41CE-9B81-FB68BFCF2572}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

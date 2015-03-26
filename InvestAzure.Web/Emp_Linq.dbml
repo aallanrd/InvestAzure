@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="demo" Class="Emp_LinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=l59006r8zo.database.windows.net;Initial Catalog=demo;User ID=aallanrd;Connect Timeout=60" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="demoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="IdEmpleado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nbrEmpleado" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdDepto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaIngreso" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="fotoStr" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.getallDep" Method="getallDep">
+    <ElementType Name="getallDepResult">
+      <Column Name="IdDepto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nbrDepto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idEncargado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ubicacion" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.listarxDeptoId" Method="listarxDeptoId">
+    <Parameter Name="dpto" Type="System.Int32" DbType="Int" />
+    <ElementType Name="listarxDeptoIdResult">
+      <Column Name="nbrEmpleado" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdEmpleado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaIngreso" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.listarxDeptoNmbre" Method="listarxDeptoNmbre">
+    <Parameter Name="dpto" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="listarxDeptoNmbreResult">
+      <Column Name="nbrEmpleado" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IdEmpleado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fechaIngreso" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

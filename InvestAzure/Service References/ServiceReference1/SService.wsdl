@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:17071/SService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:17071/SService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:17071/SService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/InvestAzure.Web" />
+      <xsd:import schemaLocation="http://localhost:17071/SService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISService_GetAllEmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEmp" />
+  </wsdl:message>
+  <wsdl:message name="ISService_GetAllEmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_GetAllDep_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDep" />
+  </wsdl:message>
+  <wsdl:message name="ISService_GetAllDep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDepResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_DelEmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelEmp" />
+  </wsdl:message>
+  <wsdl:message name="ISService_DelEmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelEmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_DelDep_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelDep" />
+  </wsdl:message>
+  <wsdl:message name="ISService_DelDep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelDepResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_ExecProcedure_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecProcedure" />
+  </wsdl:message>
+  <wsdl:message name="ISService_ExecProcedure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_getEmployees_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEmployees" />
+  </wsdl:message>
+  <wsdl:message name="ISService_getEmployees_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_GetDepIdbyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepIdbyName" />
+  </wsdl:message>
+  <wsdl:message name="ISService_GetDepIdbyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDepIdbyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_GetEmpByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpByName" />
+  </wsdl:message>
+  <wsdl:message name="ISService_GetEmpByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_insertDep_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertDep" />
+  </wsdl:message>
+  <wsdl:message name="ISService_insertDep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertDepResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_insertEmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertEmp" />
+  </wsdl:message>
+  <wsdl:message name="ISService_insertEmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertEmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_updateDep_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateDep" />
+  </wsdl:message>
+  <wsdl:message name="ISService_updateDep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateDepResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISService_updateEmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateEmp" />
+  </wsdl:message>
+  <wsdl:message name="ISService_updateEmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateEmpResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISService">
+    <wsdl:operation name="GetAllEmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/GetAllEmp" message="tns:ISService_GetAllEmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/GetAllEmpResponse" message="tns:ISService_GetAllEmp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDep">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/GetAllDep" message="tns:ISService_GetAllDep_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/GetAllDepResponse" message="tns:ISService_GetAllDep_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelEmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/DelEmp" message="tns:ISService_DelEmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/DelEmpResponse" message="tns:ISService_DelEmp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelDep">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/DelDep" message="tns:ISService_DelDep_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/DelDepResponse" message="tns:ISService_DelDep_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecProcedure">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/ExecProcedure" message="tns:ISService_ExecProcedure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/ExecProcedureResponse" message="tns:ISService_ExecProcedure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmployees">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/getEmployees" message="tns:ISService_getEmployees_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/getEmployeesResponse" message="tns:ISService_getEmployees_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepIdbyName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/GetDepIdbyName" message="tns:ISService_GetDepIdbyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/GetDepIdbyNameResponse" message="tns:ISService_GetDepIdbyName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/GetEmpByName" message="tns:ISService_GetEmpByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/GetEmpByNameResponse" message="tns:ISService_GetEmpByName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertDep">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/insertDep" message="tns:ISService_insertDep_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/insertDepResponse" message="tns:ISService_insertDep_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertEmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/insertEmp" message="tns:ISService_insertEmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/insertEmpResponse" message="tns:ISService_insertEmp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateDep">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/updateDep" message="tns:ISService_updateDep_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/updateDepResponse" message="tns:ISService_updateDep_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateEmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISService/updateEmp" message="tns:ISService_updateEmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISService/updateEmpResponse" message="tns:ISService_updateEmp_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISService" type="tns:ISService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllEmp">
+      <soap:operation soapAction="http://tempuri.org/ISService/GetAllEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDep">
+      <soap:operation soapAction="http://tempuri.org/ISService/GetAllDep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelEmp">
+      <soap:operation soapAction="http://tempuri.org/ISService/DelEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelDep">
+      <soap:operation soapAction="http://tempuri.org/ISService/DelDep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecProcedure">
+      <soap:operation soapAction="http://tempuri.org/ISService/ExecProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployees">
+      <soap:operation soapAction="http://tempuri.org/ISService/getEmployees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepIdbyName">
+      <soap:operation soapAction="http://tempuri.org/ISService/GetDepIdbyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpByName">
+      <soap:operation soapAction="http://tempuri.org/ISService/GetEmpByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertDep">
+      <soap:operation soapAction="http://tempuri.org/ISService/insertDep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertEmp">
+      <soap:operation soapAction="http://tempuri.org/ISService/insertEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateDep">
+      <soap:operation soapAction="http://tempuri.org/ISService/updateDep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmp">
+      <soap:operation soapAction="http://tempuri.org/ISService/updateEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SService">
+    <wsdl:port name="BasicHttpBinding_ISService" binding="tns:BasicHttpBinding_ISService">
+      <soap:address location="http://localhost:17071/SService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
